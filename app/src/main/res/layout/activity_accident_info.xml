@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+
+    tools:context=".ui.activities.AccidentInfoActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_background"
+        android:layout_width="match_parent"
+        android:layout_height="208dp"
+        android:background="@drawable/accident_search_toolbar_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/info_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_home"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ic_home_background_effect"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            android:src="@drawable/ic_round_arrow_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/search_title"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_home"
+            app:layout_constraintStart_toEndOf="@id/iv_home"
+            app:layout_constraintTop_toTopOf="@id/iv_home" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_from_date"
+        android:layout_width="wrap_content"
+        android:layout_height="45sp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_input_effect"
+        android:clickable="true"
+        android:ems="7"
+        android:focusable="true"
+        android:gravity="center"
+        android:hint="@string/from_date"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_to_date"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_toolbar" />
+
+    <TextView
+        android:id="@+id/tv_to_date"
+        android:layout_width="wrap_content"
+        android:layout_height="45sp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/background_input_effect"
+        android:clickable="true"
+        android:ems="7"
+        android:enabled="false"
+        android:focusable="true"
+        android:gravity="center"
+        android:hint="@string/to_date"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_from_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_from_date"
+        app:layout_constraintTop_toTopOf="@+id/tv_from_date" />
+
+
+    <TextView
+        android:id="@+id/tv_select_city"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:gravity="center"
+        android:hint="@string/select_city"
+        android:padding="10dp"
+        app:drawableEndCompat="@drawable/ic_round_arrow_drop_down"
+        app:layout_constraintBottom_toBottomOf="@id/btn_search"
+        app:layout_constraintEnd_toStartOf="@id/btn_search"
+        app:layout_constraintStart_toStartOf="@+id/tv_from_date"
+        app:layout_constraintTop_toTopOf="@id/btn_search" />
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_background_effect"
+        android:text="@string/search"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_to_date"
+        app:layout_constraintStart_toEndOf="@+id/tv_select_city"
+        app:layout_constraintTop_toBottomOf="@id/tv_to_date" />
+
+    <TableLayout
+        android:id="@+id/table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fl_background">
+
+        <TableRow android:background="@drawable/table_header_background"
+            android:paddingHorizontal="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:padding="5sp"
+                android:text="@string/table_header_region"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:padding="5sp"
+                android:text="@string/table_header_death_toll"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:padding="5sp"
+                android:text="@string/table_header_number_of_injury"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4.5"
+                android:gravity="center"
+                android:padding="5sp"
+                android:text="@string/table_header_number_of_pieces"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </TableRow>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp" >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </TableLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        android:indeterminateDrawable="@drawable/progress_bar_background"
+        app:layout_constraintBottom_toBottomOf="@id/table_layout"
+        app:layout_constraintEnd_toEndOf="@id/table_layout"
+        app:layout_constraintStart_toStartOf="@+id/table_layout"
+        app:layout_constraintTop_toTopOf="@id/table_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout><!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    tools:context=".Activity.AccidentSearchActivity">-->
+
+    <!--    <FrameLayout-->
+    <!--        android:id="@+id/fl_background"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="170dp"-->
+    <!--        android:background="@drawable/accident_search_toolbar_background"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/info_toolbar" />-->
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:id="@+id/info_toolbar"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:padding="10dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/iv_home"-->
+    <!--            android:layout_width="40dp"-->
+    <!--            android:layout_height="40dp"-->
+    <!--            android:layout_marginStart="8dp"-->
+    <!--            android:layout_marginTop="8dp"-->
+    <!--            android:background="@drawable/ic_home_background_effect"-->
+    <!--            android:clickable="true"-->
+    <!--            android:focusable="true"-->
+    <!--            android:padding="8dp"-->
+    <!--            android:src="@drawable/ic_round_arrow_back"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_title"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="20dp"-->
+    <!--            android:text="@string/search_title"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="30sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@id/iv_home"-->
+    <!--            app:layout_constraintStart_toEndOf="@id/iv_home"-->
+    <!--            app:layout_constraintTop_toTopOf="@id/iv_home" />-->
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tv_from_date"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="45sp"-->
+    <!--        android:background="@drawable/background_input"-->
+    <!--        android:clickable="true"-->
+    <!--        android:focusable="true"-->
+    <!--        android:ems="6"-->
+    <!--        android:gravity="center"-->
+    <!--        android:hint="起始日期"-->
+    <!--        android:textSize="14sp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/fl_background"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/tv_to_date"-->
+    <!--        app:layout_constraintHorizontal_chainStyle="spread"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/info_toolbar" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tv_to_date"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="45sp"-->
+    <!--        android:background="@drawable/background_input"-->
+    <!--        android:ems="6"-->
+    <!--        android:gravity="center"-->
+    <!--        android:hint="結束日期"-->
+    <!--        android:textSize="14sp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/tv_from_date"-->
+    <!--        app:layout_constraintEnd_toStartOf="@id/tv_select"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/tv_from_date"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/tv_from_date" />-->
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tv_select"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@android:drawable/editbox_background"-->
+    <!--        android:gravity="center"-->
+    <!--        android:hint="臺北市"-->
+    <!--        android:padding="10dp"-->
+    <!--        app:drawableEndCompat="@drawable/ic_round_arrow_forward"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/tv_to_date"-->
+    <!--        app:layout_constraintEnd_toStartOf="@id/btn_search"-->
+    <!--        app:layout_constraintStart_toEndOf="@id/tv_to_date"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/tv_to_date" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_search"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/button_background_effect"-->
+    <!--        android:text="@string/search"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="14sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/tv_select"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/tv_select"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/tv_select" />-->
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->

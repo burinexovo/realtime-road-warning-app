@@ -1,0 +1,184 @@
+<resources>
+    <string name="app_name">RealTimeRoadWarningApp</string>
+    <string name="google_maps_API_key">YOUR_API_KEY</string>
+    <string name="ip">http://your-server-ip:8080/RealTimeRoadWarning/</string>
+
+
+    <string name="permission_request">請求位置權限</string>
+    <string name="permission_request_summary">為了確保App功能完整，請至設定允許位置權限。</string>
+    <string name="setting_path">應用程式資訊 —> 權限 —> 位置，選擇「一律允許」。</string>
+    <string name="confirm">確定</string>
+
+    <!-- menu title -->
+    <string name="title_info">資訊</string>
+    <string name="title_map">地圖</string>
+    <string name="title_settings">設定</string>
+
+    <!--  Info page  -->
+    <string name="function_map">地圖</string>
+    <string name="function_realtime_traffic_information">即時路況</string>
+    <string name="function_accident_info">肇事資訊</string>
+    <string name="function_construction">施工中…</string>
+    <string name="function_analysis_info">分析資訊</string>
+    <string name="function_accident_record">肇事紀錄</string>
+    <string name="add_accident_record">新增肇事紀錄</string>
+    <string name="no_accident_record_description">目前沒有肇事紀錄</string>
+    <string name="info_detail">馬路如虎口，你要小心走，記得推廣我們的APP讓你行車平平安安</string>
+    <string name="dialog_account_title">帳號</string>
+    <string name="input_email">請輸入電子信箱</string>
+    <string name="next_step">下一步</string>
+    <string name="no_license_plate_information">查無車牌資料</string>
+
+    <!-- Online Note page -->
+    <string name="name">姓名</string>
+    <string name="phone_number">電話號碼</string>
+    <string name="number_of_people">乘車人數</string>
+    <string name="license_plate">車牌號碼</string>
+    <string name="select_image">選擇照片</string>
+    <string name="injury_status">受傷狀況</string>
+    <string name="car_status">車體狀況</string>
+    <string name="cause_of_accident">簡述肇事原因</string>
+    <string name="identifying">車牌辨識中…</string>
+    <string name="my_address">目前地址</string>
+    <string name="my_latitude">目前緯度</string>
+    <string name="my_longitude">目前經度</string>
+
+    <!--  accident search page  -->
+    <string name="search">查詢</string>
+    <string name="search_title">易肇事路段資料查詢</string>
+    <string name="from_date">起始日期</string>
+    <string name="to_date">結束日期</string>
+    <string name="select_city">選擇縣市</string>
+    <string name="search_city">搜尋…</string>
+    <string-array name="city_array">
+        <item>基隆市</item>
+        <item>臺北市</item>
+        <item>新北市</item>
+        <item>桃園市</item>
+        <item>新竹市</item>
+        <item>新竹縣</item>
+        <item>苗栗縣</item>
+        <item>臺中市</item>
+        <item>彰化縣</item>
+        <item>南投縣</item>
+        <item>雲林縣</item>
+        <item>嘉義市</item>
+        <item>嘉義縣</item>
+        <item>臺南市</item>
+        <item>高雄市</item>
+        <item>屏東縣</item>
+        <item>臺東縣</item>
+        <item>花蓮縣</item>
+        <item>宜蘭縣</item>
+        <item>澎湖縣</item>
+        <item>金門縣</item>
+        <item>連江縣</item>
+    </string-array>
+
+    <string name="table_header_time_of_occurrence">發生時間</string>
+    <string name="table_header_region">鄉鎮市區</string>
+    <string name="table_header_death_toll">死亡人數</string>
+    <string name="table_header_number_of_injury">受傷數</string>
+    <string name="table_header_number_of_pieces">件數</string>
+
+    <!-- Map page -->
+    <string name="direction">路線</string>
+    <string name="navigation">導航</string>
+
+    <!-- Setting page -->
+    <string name="driving_type">駕駛車種</string>
+    <string name="driving_type_summary">汽車・機車</string>
+    <string name="car_type">車種</string>
+    <string name="car">汽車</string>
+    <string name="scooter">機車</string>
+    <string name="driving_type_detail">會根據您選擇的車種規劃行車路線。</string>
+
+    <string name="power_saving">省電模式</string>
+    <string name="position_summary_on">高精度定位</string>
+    <string name="position_summary_off">省電定位</string>
+
+    <!-- Common Address page -->
+    <string name="common_address">常用地址</string>
+    <string name="common_address_description">長按地圖標記位置或搜尋地址</string>
+    <string name="add_common_address">新增常用地址</string>
+    <string name="add_common_address_detail">添加地址細節</string>
+    <string name="no_address_description">目前沒有常用地址</string>
+    <string name="dialog_add_common_address_title">新增地址</string>
+    <string name="dialog_add_common_address_summary">確定新增此地址？</string>
+    <string name="common_address_item_title">標題</string>
+    <string name="add">新增</string>
+    <string name="cancel">取消</string>
+
+    <string name="search_bar">在這裡搜尋</string>
+
+    <string name="notifications">通知</string>
+    <string name="volume">語音功能</string>
+    <string name="message">通知訊息</string>
+    <string name="warning_distance">警示距離</string>
+    <string name="distance">距離</string>
+    <string name="distance_200m">200 公尺</string>
+    <string name="distance_500m">500 公尺</string>
+    <string name="distance_1000m">1000 公尺</string>
+    <string name="warning_distance_detail">會根據您選擇的警示距離來決定警示通知時機。</string>
+    <string-array name="warning_distance_entries">
+        <item>@string/distance_200m</item>
+        <item>@string/distance_500m</item>
+        <item>@string/distance_1000m</item>
+    </string-array>
+
+    <!-- About page -->
+    <string name="about">關於</string>
+    <string name="organization">國立聯合大學 資訊管理學系</string>
+    <string name="about_version_code">Version 1.0</string>
+    <string name="about_detail">網址 https://impost.nuu.edu.tw\n電子信箱 U0833100@gmail.com</string>
+    <string name="developer">開發人員 劉猷聖 王昱淇 賴昱丞 羅珮禎 劉晏沄 鍾凱</string>
+    <string name="copyright">Copyright &#169; 2022 NUUIM</string>
+
+    <!-- Feedback page -->
+    <string name="feedback">意見回饋</string>
+    <string name="feedback_detail">歡迎分享您對我們的看法</string>
+    <string name="nickname">暱稱</string>
+    <string name="email">電子信箱</string>
+    <string name="send">送出</string>
+
+    <!-- Version page -->
+    <string name="version">版本</string>
+    <string name="version_code">1.0</string>
+    <string name="about_us">關於我們</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- No Network dialog -->
+    <string name="oops">真糟糕！</string>
+    <string name="no_network">沒有網路連線…</string>
+    <string name="no_network_detail">請確認您的網路</string>
+    <string name="reconnect">重新連線</string>
+
+    <!-- Thanks for feedback dialog -->
+    <string name="thanks">感謝您的回饋！</string>
+    <string name="thanks_detail">我們會珍視您的寶貴意見</string>
+
+    <!-- Online Note dialog -->
+    <string name="submitted">提交完畢！</string>
+
+    <!-- Analysis info page -->
+    <string name="function_pie_chart">全國死傷率</string>
+    <string name="pie_chart">年度全國死傷率</string>
+    <string name="pie_chart_remark">備註：「不明」係指案件中當事者資料無身分證及出生日期</string>
+    <string name="pedestrian">行人</string>
+    <string name="select_car_type">選擇運具</string>
+    <string-array name="car_type_array">
+        <item>行人</item>
+        <item>自行車</item>
+        <item>機車</item>
+        <item>汽車</item>
+    </string-array>
+
+    <string name="function_line_chart">各月份總死傷數</string>
+    <string name="line_chart">年度月份總死傷人數</string>
+
+    <string name="function_bar_chart">各縣市總死傷數</string>
+    <string name="bar_chart">縣市年度總死傷人數</string>
+    <string name="take_picture">拍照</string>
+
+</resources>
