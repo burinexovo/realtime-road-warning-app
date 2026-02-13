@@ -15,29 +15,25 @@
 
 ## 📸 系統預覽
 
-<table>
+<table align="center">
   <tr>
     <td width="50%">
-      <!-- TODO: 補上地圖畫面截圖 (assets/screenshots/map-view.jpg) -->
-      <p align="center"><code>🗺️ 地圖畫面截圖待補充</code></p>
-      <p align="center"><em>即時地圖 + 易肇事路段標註</em></p>
+      <img src="assets/photos/info-page.png" alt="App 主頁">
+      <p align="center"><em>App 主頁</em></p>
     </td>
     <td width="50%">
-      <!-- TODO: 補上語音警告截圖 (assets/screenshots/geofence-alert.jpg) -->
-      <p align="center"><code>🔔 警告通知截圖待補充</code></p>
-      <p align="center"><em>Geofence 觸發語音警告</em></p>
+      <img src="assets/photos/map-page.png" alt="Geofence 警告">
+      <p align="center"><em>Geofence 觸發通知警告</em></p>
     </td>
   </tr>
   <tr>
     <td width="50%">
-      <!-- TODO: 補上數據分析截圖 (assets/screenshots/chart-analysis.jpg) -->
-      <p align="center"><code>📊 數據分析截圖待補充</code></p>
+      <img src="assets/photos/analysis-1.png" alt="統計圖表">
       <p align="center"><em>全國事故數據統計圖表</em></p>
     </td>
     <td width="50%">
-      <!-- TODO: 補上路線規劃截圖 (assets/screenshots/route-planning.jpg) -->
-      <p align="center"><code>🧭 路線規劃截圖待補充</code></p>
-      <p align="center"><em>智慧路線規劃 + 導航</em></p>
+      <img src="assets/photos/accident-table.png" alt="肇事紀錄">
+      <p align="center"><em>肇事紀錄統計</em></p>
     </td>
   </tr>
 </table>
@@ -102,7 +98,7 @@
      │  Platform        │       │   PHP Server     │
      │  (Maps / Places /│       │   (Accident      │
      │   Directions /   │       │    Data API)     │
-     │   Geocoding)     │       │                  │
+     │   Geocoding)     │       │   *External*     │
      └──────────────────┘       └──────────────────┘
 ```
 
@@ -224,7 +220,7 @@ for (RouteModel routeModel : routeModels) {
 | **資料視覺化** | MPAndroidChart (Pie/Line/Bar Chart) |
 | **UI 框架** | Material Design, ConstraintLayout, Navigation Component |
 | **語音引擎** | Android TextToSpeech (TTS) |
-| **後端** | PHP + MySQL (事故數據 API) |
+| **後端** | PHP + MySQL（需自行建置，本專案僅含 Android 端） |
 
 ---
 
@@ -278,8 +274,7 @@ RealTimeRoadWarningApp/
 │   ├── drawable/                             # 70+ 圖形資源
 │   ├── navigation/                           # Navigation Graph
 │   └── values/                               # 繁體中文在地化
-├── AndroidManifest.xml                       # 權限與元件宣告
-└── google-services.json                      # Firebase 設定
+└── AndroidManifest.xml                       # 權限與元件宣告
 ```
 
 ---
@@ -298,7 +293,7 @@ RealTimeRoadWarningApp/
 ```bash
 # Clone 專案
 git clone https://github.com/burinexovo/realtime-road-warning-app.git
-cd RealTimeRoadWarningApp
+cd realtime-road-warning-app
 
 # 使用 Android Studio 開啟專案，等待 Gradle Sync 完成
 
@@ -322,6 +317,8 @@ MAPS_API_KEY=your_google_maps_api_key
 
 ### 設定後端伺服器
 
+> 後端不包含在此專案中，需自行建置 PHP + MySQL 伺服器，詳見 [後端 API 端點](#-後端-api-端點)。
+
 ```bash
 # 修改 res/values/strings.xml 中的伺服器位址
 <string name="ip">http://your-server-ip:8080/RealTimeRoadWarning/</string>
@@ -343,6 +340,8 @@ MAPS_API_KEY=your_google_maps_api_key
 
 ## 📊 後端 API 端點
 
+> 後端服務不包含在此專案中，需依下列 API 規格自行建置（PHP + MySQL）。
+
 | 端點 | 說明 | 參數 |
 |------|------|------|
 | `accident_prone_area.php` | 取得全台易肇事地點座標 | - |
@@ -353,7 +352,7 @@ MAPS_API_KEY=your_google_maps_api_key
 
 ---
 
-## 📈 技術指標
+## 📈 系統規格
 
 | 指標 | 數值 |
 |------|------|
